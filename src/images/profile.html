@@ -1,0 +1,602 @@
+<html>
+
+<head>
+    <title>
+        Login
+    </title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Include ScrollMagic and GSAP plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js"></script>
+
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="JavaScript/text">
+</script>
+    <script>
+
+        $('input[type="text"]').focus(function () {
+            $(this).addClass("focus");
+        });
+
+        $('input[type="text"]').blur(function () {
+            $(this).removeClass("focus");
+        });
+        $(document).ready(function () {
+            $('.carousel').carousel();
+            $(".dropdown-trigger").dropdown();
+
+            $('select').formSelect();
+
+
+            $('.datepicker').datepicker({
+    showButtonPanel: true,
+    dateFormat: "mm/dd/yy",
+    beforeShow: function(){    
+        
+           $(".ui-datepicker").css('font-size', 12) 
+    }
+});
+            setInterval(function () {
+                $('.carousel').carousel('next');
+            }, 2000);
+            $('.modal').modal();
+            $(document).ready(function () {
+            });
+
+
+            $('.modal').closeModal();
+        });
+        
+        $(document).ready(function () {
+            $('.slider').slider({
+                full_width: true,
+                height: 600, // default - height : 400
+
+            });
+
+            setInterval(function () {
+                $('.slider').slider('next');
+            }, 5000);
+        });
+
+
+    </script>
+
+    <style>
+        .input-field input:focus+label {
+            color: teal !important;
+        }
+
+        /* label underline focus color */
+        .row .input-field input:focus {
+            border-bottom: 1px solid teal !important;
+            box-shadow: 0 1px 0 0 teal !important
+        }
+
+        .input-field input[type=text]+label,
+        .materialize-textarea:focus:not([readonly])+label {
+            color: teal!important;
+        }
+        .input-field input[type=select]+label,
+        .materialize-textarea:focus:not([readonly])+label {
+            color: teal !important;
+        }
+
+        #tri {
+            background: url(img1.jpg)no-repeat top center;
+            background-size: cover;
+            color: #fff;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            cursor: pointer;
+        }
+
+        .carousel .carousel-item {
+            top: 150%;
+            width: 50% !important;
+        }
+
+        .carousel-item {
+            color: black;
+        }
+
+        a.disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+
+        #k {
+
+            opacity: 0.5;
+        }
+
+        .picker__date-display {
+            background-color: blue;
+        }
+
+        .picker__weekday-display {
+            background-color: red;
+        }
+
+        .picker__day--selected,
+        .picker__day--selected:hover,
+        .picker--focused .picker__day--selected {
+            background-color: blue;
+        }
+
+        #date.picker__date-display,
+        .picker__weekday-display {
+            background-color: #000000;
+        }
+
+        ::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #707171;
+            opacity: 1;
+            /* Firefox */
+        }
+
+        input.text:focus {
+            border-color:teal;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+        }
+
+        .focus {
+            border: 2px solid #AA88FF;
+            background-color: #FFEEAA;
+        }
+
+        #dropdown1.dropdown-content {
+            top: 100% !important;
+            left: 90% !important;
+            width: 250px !important;
+        }
+
+        @media only screen and (min-width : 992px) {
+            .invesible-top {
+                top: 70px;
+            }
+        }
+
+        #nav-mobile1 {
+            overflow: hidden;
+            background-color: #708090;
+        }
+
+        #nav-mobile1 a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #nav-mobile1 a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        #nav-mobile1 a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .content {
+            padding: 16px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky+.content {
+            padding-top: 60px;
+        }
+        .modal { 
+            width: 75% !important ;
+            height: 60% !important ; 
+     
+        }
+     .picker__box{
+        background-color: #CCC;
+    }
+    .picker__date-display { background-color: #6d4e7a; }
+
+        .wrapper {
+            padding-left: 300px;
+        }
+
+        #container {
+            padding-left: 300px;
+        }
+
+     
+
+        #content_info {
+            padding: 20px;
+            
+        }
+
+        #content_password {
+            padding: 20px;
+            display: none;
+        }
+
+        #content_phno {
+            padding: 20px;
+            display: none;
+        }
+
+        @media only screen and (max-width : 992px) {
+            #container {
+                padding-left: 0px;
+            }
+        }
+
+        @media only screen and (min-width : 992px) {
+            .invesible-top {
+                top: 70px;
+            }
+        }
+    </style>
+
+    </style>
+</head>
+
+<body style="font-family:Sans MS;overflow:hidden;background-color:		#e8e8e8">
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!" style="color:black">Profile </a></li>
+        <li><a href="#!" style="color:black"> School profile </a></li>
+        <li class="divider"></li>
+        <li><a href="#!" style="color:black"> Logout </a></li>
+    </ul>
+    <nav style="background-color:#343E40;height: 70px">
+        <div class="nav-wrapper" id="nav-mobile11">
+            <a href="#" class="brand-logo">  intelliQ</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" class="disabled">Hi John doe</a></li>
+                <li><a href="#" class="disabled">Role :{{}} </a></li>
+
+                <li><a href="badges.html" style="position: absolute;left:120px;">Switch Roles</a></li>
+                <li><a class="dropdown-trigger" href="#" data-target="dropdown1"><i
+                            class="material-icons left">account_circle</i> </a></li>
+
+
+
+                <li>
+
+            </ul>
+        </div>
+    </nav>
+    <div id="container">
+
+        <div id="menu" class="white-text">
+
+            <ul id="slide-out" class="center-align side-nav fixed invesible-top" style="background-color: 	#aeaeae"> 
+                <br />
+                <img class="responsive-img circle black" style="height:150px;top:50px;" src="images/man-user.png">
+                <br />
+                <br />
+                <li><h6><a onclick="info();" style="font-size: 18px"><img src="images/information.png" style="height:20px"> Personal Info</a></h6></li>
+                    <li><h6><a onclick="changepassword();" style="font-size: 18px"><img src="images/key.png" style="height:20px"> Change Password</a></h6></li>
+                <li><h6><a onclick="change();"  style="font-size: 18px"><img src="images/phone-receiver.png" style="height:20px"> Change Mobile</a></h6></li>
+
+            </ul>
+        </div>
+        <!DOCTYPE html>
+        <html>
+
+        <body>
+
+
+
+
+            <p id="demo"></p>
+
+            <script>
+                function myFunction() {
+                    document.getElementById("content").innerHTML = "Hello World";
+                }
+
+                function info() {
+
+
+                    document.getElementById('content_info').style.display = "block";
+
+
+                    document.getElementById('content_phno').style.display = "none";
+
+                    document.getElementById('content_password').style.display = "none";
+                }
+
+                function changepassword() {
+
+                    document.getElementById('content_password').style.display = "block";
+
+
+                    document.getElementById('content_phno').style.display = "none";
+
+
+                    document.getElementById('content_info').style.display = "none";
+                }
+                function change() {
+
+
+                    document.getElementById('content_phno').style.display = "block";
+
+
+                    document.getElementById('content_password').style.display = "none";
+
+
+                    document.getElementById('content_info').style.display = "none";
+
+
+
+
+                }
+                function fun1() {
+
+                    document.getElementById('otp').style.display = "block";
+
+
+                }
+                function fun2() {
+
+document.getElementById('otp1').style.display = "block";
+
+
+}
+
+
+
+            </script>
+            <script>
+                window.onscroll = function () { myFunction() };
+
+                var nav = document.getElementById("nav-mobile1");
+                var sticky = nav.offsetTop;
+
+                function myFunction() {
+                    if (window.pageYOffset >= sticky) {
+                        nav.classList.add("sticky")
+                    } else {
+                        nav.classList.remove("sticky");
+                    }
+                }
+            </script>
+        </body>
+
+        </html>
+
+        <div id="content_info">
+            <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i
+                    class="material-icons">menu</i></a>
+            <h4><b><i class='material-icons'>account_circle</i> About</b></h4>
+
+</html><br />
+
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Placeholder" value="John" id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input value="Doe" id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="input-field col s6">
+                <input disabled value="username111" id="disabled" type="text" class="validate">
+                <label for="disabled">User name</label>
+            </div>
+            <div class="input-field col s6">
+                <input disabled value="9182749850" id="disabled" type="text" class="validate">
+                <label for="last_name">Mobile</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <select style="left:70%!important;color:blue">
+
+
+                    <option value="3">Male</option>
+                    <option value="4">Female</option>
+
+                </select>
+                <label for="gender"> gender</label>
+            </div>
+            <div class="input-field col s4">
+                <label for="date">Date of Birth</label>
+                <input type="text" class="datepicker" id="date">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+
+                <div class="input-field ">
+                    <input id="email_inline" type="email" class="validate">
+                    <label for="email_inline">Email</label>
+                    <span class="helper-text" data-error="Please enter a proper email" data-success="right"></span>
+               
+        <button class=" white btn waves-effect waves-light" style="color: #53616c" type="submit" name="action">Update
+            info
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+</div>
+</div>
+
+    </form>
+</div>
+</div>
+
+
+</div>
+
+
+<div id="content_password">
+    <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i
+            class="material-icons">menu</i></a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s3">
+
+                <div class="input-field ">
+                    <input id="email_inline" type="email" class="validate">
+                    <label for="email_inline">Current Password</label>
+                    <span class="helper-text" data-error="wrong" data-success="right"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s8 offset-s3">
+
+                <div class="input-field ">
+                    <input id="email_inline" type="email" class="validate">
+                    <label for="email_inline">New Password</label>
+                    <span class="helper-text" data-error="wrong" data-success="right"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s8 offset-s3">
+                <a class="white waves-effect waves-light btn" onclick="fun1();" style="color: #53616c"><i
+                        class="material-icons right">send</i>Generate OTP</a>
+            </div>
+        </div>
+        <div id="otp" style="display: none">
+            <div class="row">
+                <div class="col s8 offset-s3">
+
+                    <div class="input-field ">
+                        <input id="email_inline" type="email" class="validate">
+                        <label for="email_inline">Enter OTP</label>
+                        <span class="helper-text" data-error="wrong" data-success="right"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s4">
+                            <a class="white waves-effect waves-light btn" style="color: #53616c" onclick=""><i
+                                    class="material-icons right">send</i>Verify OTP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div id="content_phno">
+    <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i
+            class="material-icons">menu</i></a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s3">
+
+                <div class="input-field ">
+                    <input id="email_inline" type="email" class="validate">
+                    <label for="email_inline">Current Mobile</label>
+                    <span class="helper-text" data-error="wrong" data-success="right"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s8 offset-s3">
+
+                <div class="input-field ">
+                    <input id="email_inline" type="email" class="validate">
+                    <label for="email_inline">New Mobile</label>
+                    <span class="helper-text" data-error="wrong" data-success="right"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s8 offset-s3">
+                <a class="white waves-effect waves-light btn" onclick="fun2();" style="color: #53616c"><i
+                        class="material-icons right">send</i>Generate OTP</a>
+            </div>
+        </div>
+        <div id="otp1" style="display: none">
+            <div class="row">
+                <div class="col s8 offset-s3">
+
+                    <div class="input-field ">
+                        <input id="email_inline" type="email" class="validate">
+                        <label for="email_inline">Enter OTP</label>
+                        <span class="helper-text" data-error="wrong" data-success="right"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col s4">
+                            <a class="white waves-effect waves-light btn" style="color: #53616c" onclick=""><i
+                                    class="material-icons right">send</i>Verify OTP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+<!-- end snippet -->
+
+
+<br />
+<br />
+
+
+
+</body>
+
+</html>

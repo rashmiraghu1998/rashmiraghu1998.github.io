@@ -1,0 +1,147 @@
+
+
+.scroll {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    right: 50%;
+    margin-left: -7rem;
+    width: 14rem;
+    height: auto;
+    font-family: 'futura-pt', Futura, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #ffffff;
+
+
+
+
+}
+
+.word {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.letter {
+    position: relative;
+    margin: 0 1.8rem;
+
+}
+
+.form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+  
+}
+
+.fill-1 {
+    fill: url(#gradient-2);
+}
+
+.fill-2 {
+    fill: url(#gradient-6);
+}
+
+.fill-3 {
+    fill: url(#gradient-3); 
+}
+
+.fill-4 {
+    fill: url(#gradient-1);
+}
+
+.fill-5 {
+    fill: url(#gradient-4);
+}
+
+.fill-6 {
+    fill: url(#gradient-5);
+}
+
+.hidden {
+    position: absolute;
+    top: -1000rem;
+    left: -1000rem;
+    width: 0;
+    height: 0;
+}
+
+.Admin {
+    left: 30%
+}
+.Student {
+    left: 50%
+}
+.Handler {
+    left: 70%
+}
+.Admin, .Student, .Handler {
+    position: absolute;
+    width: 24rem;
+    height: 10rem;
+    bottom: 70vh;
+    /* left: 50%; */
+    margin-left: -12rem;
+
+    font-family: 'futura-pt', Futura, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    line-height: 10rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-decoration: none;
+    background-image: linear-gradient(to bottom, #3f51b5 0%, #8179cb 100%);
+    color: #ffffff;
+
+  
+}
+
+.intro {
+    position: absolute;
+   
+    height: 2rem;
+    bottom: 50vh;
+    left: 37%;
+    margin-left: -12rem;
+    align-items: center;
+    font-family: 'futura-pt', Futura, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    line-height: 10rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-decoration: none;
+   
+    color: #000000;
+
+}
+
+.skill {
+    
+   
+    height: 2rem;
+ 
+  
+    align-items: center;
+    font-family: 'futura-pt', Futura, Helvetica, sans-serif;
+    font-weight: bold;
+    justify-content: right;
+
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-decoration: none;
+   
+    color: #000000;
+
+}
